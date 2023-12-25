@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/song940/fileinfo-go/fileinfo"
 )
 
 func main() {
 	filename := os.Args[1]
-	out := Parse(filename)
+	out := fileinfo.Parse(filename)
 	fmt.Println("Title:", out.Title)
 	fmt.Println("Year:", out.Year)
 	fmt.Println("Source:", out.Source)
